@@ -1,0 +1,34 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: MeshGateway
+  cloud:
+    gateway:
+      locator:
+        enabled: true
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: false
+      routes:
+        - id: mesh-auth
+          uri: lb://MeshAuthServer
+          predicates:
+            - Path=/oauth/**
+        - id: mesh-service-a
+          uri: lb://MeshServiceA
+          predicates:
+            - Path=/service/a/**
+        - id: mesh-service-b
+          uri: lb://MeshServiceB
+          predicates:
+            - Path=/service/b/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@mesh-eureka:9000/eureka/
+    fetch-registry: true
+
+
