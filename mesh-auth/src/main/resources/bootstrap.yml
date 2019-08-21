@@ -1,0 +1,12 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: MeshAuthServer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@mesh-eureka:8761/eureka/
+    fetch-registry: true
+
