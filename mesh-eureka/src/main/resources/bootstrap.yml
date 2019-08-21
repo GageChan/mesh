@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: mesh-eureka
+  security:
+    user:
+      name: admin
+      password: admin
+
+eureka:
+  instance:
+    hostname: mesh-eureka
+  server:
+    enable-self-preservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:${server.port}/eureka/

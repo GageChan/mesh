@@ -1,0 +1,11 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: MeshServiceB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@mesh-eureka:8761/eureka/
+    fetch-registry: true
