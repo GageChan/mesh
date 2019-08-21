@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 9003
 
 spring:
   application:
@@ -7,5 +7,5 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@mesh-eureka:8761/eureka/
+      defaultZone: http://admin:admin@mesh-eureka:9000/eureka/
     fetch-registry: true
