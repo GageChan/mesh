@@ -87,6 +87,7 @@
     <modules>
         <module>mesh-eureka</module>
         <module>mesh-service-a</module>
+        <module>mesh-service-b</module>
         <module>mesh-auth</module>
     </modules>
 
