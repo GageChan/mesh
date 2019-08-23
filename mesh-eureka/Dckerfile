@@ -1,0 +1,16 @@
+FROM java:8
+
+MAINTAINER gagechan gagechann@gmail.com
+
+VOLUME /ROOT
+
+ADD mesh-eureka-0.0.1-SNAPSHOT.jar eureka.jar
+
+RUN bash -c 'touch /eureka.jar'
+
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+&& echo 'Asia/Shanghai' >/etc/timezone
+
+EXPOSE 9000
+
+ENTRYPOINT ["java", "-jar", "eureka.jar"]
