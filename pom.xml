@@ -90,6 +90,7 @@
         <module>mesh-service-a</module>
         <module>mesh-service-b</module>
         <module>mesh-auth</module>
+        <module>mesh-gateway</module>
     </modules>
 
     <dependencyManagement>
