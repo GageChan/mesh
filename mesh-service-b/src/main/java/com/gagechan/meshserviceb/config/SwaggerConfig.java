@@ -51,7 +51,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("服务a")
                 .description("apis of member")
-                .termsOfServiceUrl("https://www.superzoo.com.cn/")
+                .termsOfServiceUrl("https://www.gagechan.com/")
                 .version("1.0")
                 .build();
     }
